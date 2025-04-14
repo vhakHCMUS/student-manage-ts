@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useCallback } from 'react';
 
-const BATCH_SIZE = 10000;
+const BATCH_SIZE = 1000;
 
 export default function ImportPage() {
   const [isImporting, setIsImporting] = useState(false);
