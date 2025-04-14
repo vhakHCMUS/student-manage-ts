@@ -1,0 +1,31 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Student {
+  id                  String   @id @default(cuid())
+  registrationNumber  String   @unique // sbd in CSV
+  math                Float? // toan
+  literature          Float? // ngu_van
+  foreignLanguage     Float? // ngoai_ngu
+  physics             Float? // vat_li
+  chemistry           Float? // hoa_hoc
+  biology             Float? // sinh_hoc
+  history             Float? // lich_su
+  geography           Float? // dia_li
+  civicEducation      Float? // gdcd
+  foreignLanguageCode String? // ma_ngoai_ngu
+  createdAt           DateTime @default(now())
+  updatedAt           DateTime @updatedAt
+}
