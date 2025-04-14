@@ -33,7 +33,7 @@ A web application for managing and analyzing student scores, built with Next.js,
 
 1. Clone the repository:
 ```bash
-git clone <your-repo-url>
+git clone https://github.com/vhakHCMUS/student-manage-ts
 cd student-management-react
 ```
 
